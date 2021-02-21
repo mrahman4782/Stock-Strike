@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Stock Strike
+    </title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+    <div id= "container">
+      <div id = "top">
+        <div id = "toptext">
+          <h1>Stock Strike</h1>
+
+        </div>
+
+      </div>
+      <div id = "bottom">
+        <div id = "instructions">
+          <h4>Complete each field</h4>
+          <hr width = 70%/>
+        </div>
+        <form action="/start_task" method="GET">
+          <table>
+            <tr>
+              <td>
+                <div id = "tabletext" class = "row1">
+                  Ticker Symbol:
+                </div>
+              </td>
+              <td>
+                <input name="ticker" class = "row1" type = "text"  required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id = "tabletext" class = "row2">
+                  Target Price:
+                </div>
+              </td>
+              <td>
+                <input name = "target" class = "row2"  required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id = "tabletext" class = "row3">
+                  Email:
+                </div>
+              </td>
+              <td>
+                <input name= "email" class = "row3" type = "email"  required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id = "submit">Submit</button>
+              </td>
+              <td>
+                <button id = "reset" type = "button" onclick = "end()" >Reset</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <div class = "oper">h</div>
+        <hr width = 70% style = margin-top:70px;/>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
